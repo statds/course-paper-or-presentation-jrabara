@@ -34,11 +34,17 @@ In a more broad sense, it cannot be pinpointed as to how rising college tuition 
 
 
 \section{Methods}
-For data, there will be analyses on various data provided by sources from Taylor \& Francis and the UCONN Library databases. Regression models will be generated in order to visually represent the trends that are discovered while also being used to predict future values for subjects such as college tuition or attendances by the slope of each model. Given by the equations: 
+There will be analyses on various data provided by sources from Taylor \& Francis and the UCONN Library databases. Regression models will be generated in order to visually represent the trends that are discovered while also being used to predict future values for subjects such as college tuition or attendances by the slope of each model. Given by 
 
 \begin{equation}
-\hat{Y}_i = \hat{\beta}_0 + \hat{\beta}_1 X_i + \hat{\epsilon}_i
+Price = \hat{\beta}_0 + Years X_i + \epsilon
 \end{equation}
+
+\begin{equation}
+Attendance = \hat{\beta}_0 + Years X_i + \epsilon
+\end{equation}
+
+in which the Y is the dependent variable (Price and Attendance), $\hat{\beta}_0$ describes when the line first interacts with the x-axis, and the years (independent variable) in both equations are represented by the mathematical unit $\hat{\beta}_1$ that is universally known to represent the ratio of which y increases/decreases as x also increases/decreases. In this case, the two separate $\hat{\beta}_1$'s will be used to measure different slopes of change in tuition and attendance as years progress. The value of this indicator for each graph is found by using the equation
 
 \begin{equation}
 \hat{\beta}_1 = \frac{\sum(X_i – \bar{X}) (Y_i – \bar{Y})} {\sum(X_i – \bar{X})^2}
@@ -51,11 +57,15 @@ A correlation coefficient will be added to further prove if the data has a stron
 {\sqrt{\sum_{i=1}^{n} (x_i - \overline{x})^2(y_i - \overline{y})^2}}
 \end{equation}
 
-Finally, a hypothesis test in the form of a chi-square test will be used. The purpose of the hypothesis test will be to confirm if the beta coefficients hold actual significance to the linear regression model. In the presence of a chi-square test, there is analysis to find a significant relationship between variables and to see if the sample properly represents the population. (Khandelwal, 2021). 
+In this, the Pearson correlation formula is used due to it's wide range in use and applicability to measure the degree of relationship between linearly related variables. The r being the correlation coefficient, n as the number of observations, then x and y are the values that represent the respective variables.
+
+With accuracy being a critical aspect with any statistical analysis, the standard error will be in use amongst the calculations. The standard error measures the accuracy with which the sample distribution in current use represents the overall population through the use of standard deviation. Due to the use of linear regression models in this analysis, the standard error's primary objective will be to represent the average distance that observed values within the study differ from the regression lines generated. The standard error can also determine the precision of predictions made from regression models. This mathematical tool in a linear model form is given by
 
 \begin{equation}
-\[\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}\]
+\ {s}({\beta}_1) = \sqrt{\frac{1}{n-2} * \frac{\sum{(y_i - \hat{y_i})}}{\sum{(x_i - \hat{x_i})}}}
 \end{equation}
+
+n being the size of the sample, $y_i$ being the actual value of the independent variable while $\hat{y_i}$ is the predicted value as same applies to the x values for the dependent variables.
 
 \section{Simulation}
 
