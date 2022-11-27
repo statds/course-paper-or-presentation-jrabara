@@ -1,6 +1,5 @@
 \documentclass[12pt]{article}
 
-\DeclareMathSizes{12}{30}{16}{12}
 \usepackage{a4wide}
 \usepackage{caption} 
 \captionsetup[table]{skip=10pt}
@@ -62,287 +61,27 @@ Finally, a hypothesis test in the form of a chi-square test will be used. The pu
 
 The process begins by first collecting data on the average college tuition for every year from 1970 to 2019 as shown below. This data compares the national average tuition costs between both public and private institutions (Education Data Initiative, 2022). Then from there, the total attendance of both public and private 4 year universities was acquired by the same source in order to develop a sense of whether or not demand for higher education has either dropped or increased. To undergo the mathematical simulation, all data had to be put into R Studio and created into data frames. From there, it was possible to obtain summary statistics and generate graphs. Multiple versions of code were also run to generate slope equations for each category observed. 
 
-\begin{table}
-\caption{Average Tuition Over the Years Between Private and Public Colleges}
-\begin{minipage}{.5\linewidth}
-\centering
-\begin{tabular}{l|c r}
-\hline
-Year & Public 4-Year & Private 4-Year\\
-\hline
-2019	& 9,349        & 32,769\\
-\hline
-2018	& 9,212        & 31,883\\
-\hline
-2017	& 9,036        & 30,723\\
-\hline
-2016	& 8,804        & 29,476\\
-\hline
-2015	& 8,778        & 27,942\\
-\hline
-2014	& 8,543        & 26,739\\
-\hline
-2013	& 8,312        & 25,707\\
-\hline
-2012	& 8,070        & 24,523\\
-\hline
-2011	& 7,713        & 23,464\\
-\hline
-2010	& 7,132        & 22,677\\
-\hline
-2009	& 6,717        & 22,269\\
-\hline
-2008	& 6,312        & 22,040\\
-\hline
-2007	& 5,943        & 21,427\\
-\hline
-2006	& 5,666        & 20,517\\
-\hline
-2005	& 5,351        & 19,292\\
-\hline
-2004	& 5,027        & 18,604\\
-\hline
-2003	& 4,587        & 17,763\\
-\hline
-2002	& 4,046        & 16,826\\
-\hline
-2001	& 3,735        & 16,211\\
-\hline
-2000	& 3,501        & 15,470\\
-\hline
-1999    & 3,349	       & 14,616\\
-\hline
-1998	& 3,229	       & 13,973\\
-\hline
-1997	& 3,110	       & 13,344\\
-\hline
-1996	& 2,987	       & 12,881\\
-\hline
-1995	& 2,848	       & 12,243\\
-\hline
-1994	& 2,681	       & 11,481\\
-\hline
-1993	& 2,537	       & 10,952\\
-\hline
-1992	& 2,349	       & 10,294\\
-\hline
-\end{tabular}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-\centering
-\begin{tabular}{l| c r }
-\hline
-Year & Public 4-Year & Private 4-Year\\
-\hline
-1991	& 2,117	       & 9,759\\
-\hline
-1990	& 1,888	       & 9,083\\
-\hline
-1989	& 1,780	       & 8,396\\
-\hline
-1988	& 1,646	       & 7,722\\
-\hline
-1987	& 1,537	       & 7,116\\
-\hline
-1986	& 1,414	       & 6,658\\
-\hline
-1985	& 1,318	       & 6,121\\
-\hline
-1984	& 1,228	       & 5,556\\
-\hline
-1983	& 1,148	       & 5,093\\
-\hline
-1982	& 1,031	       & 4,639\\
-\hline
-1981	& 909	       & 4,113\\
-\hline
-1980	& 804	       & 3,617\\
-\hline
-1979	& 738	       & 3,225\\
-\hline
-1978	& 688	       & 2,958\\
-\hline
-1977	& 655	       & 2,700\\
-\hline
-1976	& 617	       & 2,534\\
-\hline
-1975	& 542	       & 2,291\\
-\hline
-1974	& 512	       & 2,130\\
-\hline
-1973	& 514	       & 2,045\\
-\hline
-1972	& 503	       & 1,948\\
-\hline
-1971	& 428	       & 1,832\\
-\hline 
-1970    & 394          & 1706\\
-\hline
-\end{tabular}
-\end{minipage} 
-\end{table}
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=10cm]{Public Tuition Plot.pdf}
+    \includegraphics[width=10cm]{Public Tuition PDF.pdf}
     \caption{A linear model of the given data for Public College tuition
              since 1970}
 \end{figure}
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=10cm]{Screen Shot 2022-11-09 at 7.13.11 PM.png}
-    \caption{Descriptive statistics marking the slope at 196 for every unit increase with a y-intercept of -387,400}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=10cm]{Private College Tuition.pdf}
+    \includegraphics[width=10cm]{Private Tuition PDF.pdf}
     \caption{A linear model of the given data for Private College tuition}
 \end{figure}
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=10cm]{Screen Shot 2022-11-09 at 7.15.06 PM.png}
-    \caption{Descriptive statistics marking the slope at 637.2 for every unit increase with a y-intercept of -1,258,000 }
-    \label{fig:galaxy}
-\end{figure}
-
-
-\begin{table}
-\caption{Total College Enrollment since 1970}
-\begin{minipage}{.5\linewidth}
-\centering
-\begin{tabular}{l| c r}
-\hline
-Year    & Total College Enrollment\\
-\hline
-2019	&19,630,178\\
-\hline
-2018	& 19,651,412\\	
-\hline
-2017	& 19,778,151\\	
-\hline
-2016	& 19,846,904\\	
-\hline
-2015	& 19,988,204\\	
-\hline
-2014	& 20,209,092\\	
-\hline
-2013	& 20,376,677\\	
-\hline
-2012	& 20,644,478\\	
-\hline
-2011	& 21,010,590\\
-\hline
-2010	& 21,019,438\\	
-\hline
-2009	& 20,313,594\\	
-\hline
-2008	& 19,081,686\\
-\hline
-2007	& 18,258,138\\
-\hline
-2006	& 17,754,230\\
-\hline
-2005	& 17,487,475\\
-\hline
-2004	& 17,272,044\\
-\hline
-2003	& 16,911,481\\
-\hline
-2002	& 16,611,711\\
-\hline
-2001	& 15,927,987\\	
-\hline
-2000	& 15,312,289\\	
-\hline
-1999	& 14,849,691\\
-\hline
-1998	& 14,506,967\\
-\hline
-1997	& 14,502,334\\
-\hline
-1996	& 14,367,520\\
-\hline
-1995	& 14,261,781\\
-\hline
-1994	& 14,278,790\\
-\hline
-1993	& 14,304,803\\
-\hline
-1992	& 14,487,359\\
-\hline
-\end{tabular}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-\centering
-\begin{tabular}{l| c r}
-\hline
-Year    & Total College Enrollment\\
-\hline
-1991	& 14,358,953\\	
-\hline
-1990	& 13,818,637\\	
-\hline
-1989	& 13,538,560\\	
-\hline
-1988	& 13,055,337\\	
-\hline
-1987	& 12,766,642\\
-\hline
-1986	& 12,503,511\\	
-\hline
-1985	& 12,247,055\\	
-\hline
-1984	& 12,241,940\\	
-\hline
-1983	& 12,464,661\\	
-\hline
-1982	& 12,425,780\\
-\hline
-1981	& 12,371,672\\
-\hline
-1980	& 12,096,895\\
-\hline
-1979	& 11,569,899\\	
-\hline
-1978	& 11,260,092\\
-\hline
-1977	& 11,285,787\\	
-\hline
-1976	& 11,012,137\\	
-\hline
-1975	& 11,184,859\\	
-\hline
-1974	& 10,223,729\\
-\hline
-1973	& 9,602,123\\
-\hline
-1972	& 9,214,860\\
-\hline
-1971	& 8,948,644\\
-\hline
-1970	& 8,580,887\\
-\hline
-\end{tabular}
-\end{minipage} 
-\end{table}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=10cm]{Attendance Plot.png}
+    \includegraphics[width=10cm]{College Attendence PDF.pdf}
     \caption{A linear model of the given data for total 4 year college attendance
              since 1970}
-    \label{fig:galaxy}
 \end{figure}
 
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=10cm]{Screen Shot 2022-11-09 at 8.50.30 PM.png}
-    \caption{Descriptive statistics marking the slope at 244,600 for every unit increase with a y-intercept of -472,900,000}
-    \label{fig:galaxy}
-\end{figure}
 
 \section{Application}
 From the given graphs and data presented, we can see that all of the data has a positive slope from 1970 to 2019. From an attendance standpoint, the amount of people enrolled in four year universities increases almost every year. We can credit this to how much of a demand that college education has become in the always evolving job market. With the better and high paying jobs that having a college degree can lead one to, it can be observed that this also benefits the individual in other ways. Correlations have been found that illustrate how those with degrees further experience higher standards of living and better social/personal well being (Chan, 2016). With promises of better quality of life, it's understandable how correlation grew strong between college attendance as time passed. Due to high attendance, universities should have no difficulty in raising funds to support their influx of students. Therefore, how is it that prices have been soaring to margins that are vastly unobtainable to the average student. So unobtainable in fact, many students have been forced to put loans under their names just for higher education and more financial opportunities. Universities obviously don't care how much turmoil they put recent high school graduates under by asking for so much money, as shown mathematically, they have no sympathy for those that cannot afford their services, as long as they're able to get students that can afford it. 
@@ -358,34 +97,6 @@ Given the following data and resources provided, it's evident that besides a mat
 \section{Appendix}
 
 All data used in the this paper can be credited to the Education Data Initiative. A team of researchers that are dedicated in collecting statistics on the US education system in the hopes of making such data more accessible to the public. All the code used for the simulations were done in R Studio. All references were sourced from Google Scholar. To guarantee college inflation rates actually did raise to around 2000\%, other sources were researched to ensure this values impact and truth. To avoid the error of putting data into R individually, all values were copy and pasted into R to establish no human error when it came to calculations.
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=10cm]{Screen Shot 2022-11-14 at 4.07.53 PM.png}
-    \caption{An image of code used for running mathematical simulations}
-    \label{fig:galaxy}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=10cm]{Screen Shot 2022-11-14 at 1.21.19 PM.png}
-    \caption{An image of code used for running mathematical simulations}
-    \label{fig:galaxy}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=10cm]{Screen Shot 2022-11-14 at 1.41.14 PM.png}
-    \caption{An image of code used for running mathematical simulations}
-    \label{fig:galaxy}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=10cm]{Screen Shot 2022-11-14 at 1.44.13 PM.png}
-    \caption{An image of code used for running mathematical simulations}
-    \label{fig:galaxy}
-\end{figure}
 
 \section{References}
 Please refer to references.bib for the time being.
