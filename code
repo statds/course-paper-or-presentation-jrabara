@@ -53,6 +53,10 @@ plot(x = Year,
              Over the Years")
 abline(lm(Public.Tuition ~ Year))
 
+res <- cor.test(Public.Compare$Year, Public.Compare$Public.Tuition,
+                method = "pearson")
+res$estimate
+
 # Now Private Schools
 
 private.lm <- lm(formula = Private.Tuition ~ Year,
@@ -69,6 +73,10 @@ plot(x = Year,
      main = "Linear Regression Model of Private College Tuition
              Over the Years")
 abline(lm(Private.Tuition ~ Year))
+
+res <- cor.test(Private.Compare$Year, Private.Compare$Private.Tuition,
+                method = "pearson")
+res$estimate
 
 #Now start of College Attendence
 
@@ -100,3 +108,7 @@ plot(x = Year,
      main = "Linear Regression Model of Total College Attendence
              Over the Years")
 abline(lm(Total.Attendance ~ Year))
+
+res <- cor.test(Attendance.Compare$Year, Attendance.Compare$Total.Attendance,
+                method = "pearson")
+res$estimate
