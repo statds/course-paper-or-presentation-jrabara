@@ -38,9 +38,11 @@ Not only are tuition prices unbelievable priced, but such high costs then put th
 
 In a more broad sense, it cannot be pinpointed as to how rising college tuition benefits anybody besides the institutions that cause such financial difficulty. Prior research typically describes data of increasing tuition costs and answers the question of merely how much has tuition increased. However through this analysis, there will be data provided to see if college attendance has changed, how tuition has overall risen throughout the country over the years, and applications from a business and ethical standpoint to determine whether or not colleges are justified in becoming so financially demanding on those they are supposed to benefit. Simulations such as tables and plots will provide visual representations of data to such topics to better illustrate the changes over time. Methods and mathematical applications will describe such graphs and provide proof as to how we can make such assumptions. Finally, a discussion portion can finally establish if college tuition rates are justified, or if universities over the years have been raising tuition to generate more profit from generations of people that seek more opportunities in life through the only way they know how. This paper will show you how data was obtained in Section 2, from there mathematical models and purposes will be in Section 3. Once semantics are explained, proper simulations are shown in section 4 with it's applications on our society in section 5. Finally section 6 discusses the overall takeaways with 7 working as the appendix.
 
+\section{Data}
+Data comes from The Education Data Initiative \citep{hanson_2022}. The data observed is the average public and private college tuition from 1970 to 2019 along with overall college attendance rates for that time span. Both data sets come from a reflection on the population of 4 year universities within the country.
 
 \section{Methods}
-There will be analyses on various data provided by sources from Taylor \& Francis and the UCONN Library databases. Regression models will be generated in order to visually represent the trends that are discovered while also being used to predict future values for subjects such as college tuition or attendances by the slope of each model. Given by 
+ Regression models will be generated in order to visually represent the trends that are discovered while also being used to predict future values for subjects such as college tuition or attendances by the slope of each model. Given by 
 
 \begin{equation}
 Price = \hat{\beta}_0 + Years X_i + \epsilon
@@ -50,7 +52,7 @@ Price = \hat{\beta}_0 + Years X_i + \epsilon
 Attendance = \hat{\beta}_0 + Years X_i + \epsilon
 \end{equation}
 
-in which the Y is the dependent variable (Price and Attendance), $\hat{\beta}_0$ describes when the line first interacts with the x-axis, and the years (independent variable) in both equations are represented by the mathematical unit $\hat{\beta}_1$ that is universally known to represent the ratio of which y increases/decreases as x also increases/decreases. In this case, the two separate $\hat{\beta}_1$'s will be used to measure different slopes of change in tuition and attendance as years progress. The value of this indicator for each graph is found by using the equation
+in which the Y is the dependent variable (Price and Attendance), $\hat{\beta}_0$ describes when the line first interacts with the y-axis, and the years (independent variable) in both equations are represented by the mathematical unit $\hat{\beta}_1$ that is universally known to represent the ratio of which y increases/decreases as x also increases/decreases. In this case, the two separate $\hat{\beta}_1$'s will be used to measure different slopes of change in tuition and attendance as years progress. The value of this indicator for each graph is found by using the equation
 
 \begin{equation}
 \hat{\beta}_1 = \frac{\sum(X_i – \bar{X}) (Y_i – \bar{Y})} {\sum(X_i – \bar{X})^2}
@@ -65,13 +67,14 @@ A correlation coefficient will be added to further prove if the data has a stron
 
 In this, the Pearson correlation formula is used due to it's wide range in use and applicability to measure the degree of relationship between linearly related variables. The r being the correlation coefficient, n as the number of observations, then x and y are the values that represent the respective variables.
 
-With accuracy being a critical aspect with any statistical analysis, the standard error will be in use amongst the calculations. The standard error measures the accuracy with which the sample distribution in current use represents the overall population through the use of standard deviation. Due to the use of linear regression models in this analysis, the standard error's primary objective will be to represent the average distance that observed values within the study differ from the regression lines generated. The standard error can also determine the precision of predictions made from regression models. This mathematical tool in a linear model form is given by
+With accuracy being a critical aspect with any statistical analysis, the residual standard error will be in use amongst the calculations. The standard error measures the accuracy with which the sample distribution in current use represents the overall population through the use of standard deviation. Due to the use of linear regression models in this analysis, the residual standard error's primary objective will be to represent the average distance that observed values within the study differ from the regression lines generated. The standard error can also determine the precision of predictions made from regression models. This mathematical tool in a linear model form is given by
 
-\begin{equation}
-\ {s}({\beta}_1) = \sqrt{\frac{1}{n-2} * \frac{\sum{(y_i - \hat{y_i})}}{\sum{(x_i - \hat{x_i})}}}
+\begin{equation} 
+\ {RSE} = \sqrt{\frac{\sum{(y_i - \hat{y_i})}^2}{ {df}}}
 \end{equation}
 
-n being the size of the sample, $y_i$ being the actual value of the independent variable while $\hat{y_i}$ is the predicted value as same applies to the x values for the dependent variables.
+in which df represents the degrees of freedom used within the analysis, $y_i$ being the actual value of the independent variable while $\hat{y_i}$ is the predicted value. The goal is to have a low value when doing the calculations, meaning that the lower the RSE is, the better a regression model fits the overall data set.  With three separate linear regression models being in use, it's critical that not only they are accurate, but the can be of proper use when time comes to estimate future college tuition. 
+
 
 \section{Simulation}
 
