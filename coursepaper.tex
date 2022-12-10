@@ -76,11 +76,13 @@ With accuracy being a critical aspect with any statistical analysis, the residua
 
 in which df represents the degrees of freedom used within the analysis, $y_i$ being the actual value of the independent variable while $\hat{y_i}$ is the predicted value. The goal is to have a low value when doing the calculations, meaning that the lower the RSE is, the better a regression model fits the overall data set.  With three separate linear regression models being in use, it's critical that not only they are accurate, but the can be of proper use when time comes to estimate future college tuition. 
 
+\newpage
+
 \section{Simulation}
 
-The process begins by first collecting data on the average college tuition for every year from 1970 to 2019 as shown below. This data compares the national average tuition costs between both public and private institutions. Then from there, the total attendance of both public and private 4 year universities was acquired by the same source in order to develop a sense of whether or not demand for higher education has either dropped or increased. To undergo the mathematical simulation, all data had to be put into R Studio and created into data frames. From there, it was possible to obtain summary statistics and generate graphs. Multiple versions of code were also run to generate slope equations for each category observed. When summary statistics were developed of every group more in depth knowledge on other mathematical insights such as the Pearson's Correlation Coefficient and the Standard Error as described in Section 2 were then acquired. 
+The process begins by first collecting data on the average college tuition for every year from 1970 to 2019 as shown below. This data compares the national average tuition costs between both public and private institutions. Then from there, the total attendance of both public and private 4 year universities was acquired by the same source in order to develop a sense of whether or not demand for higher education has either dropped or increased. To undergo the mathematical simulation, all data had to be put into R Studio and created into data frames. From there, it was possible to obtain summary statistics and generate graphs. Multiple versions of code were also run to generate slope equations for each category observed. When summary statistics were developed of every group more in depth knowledge on other mathematical insights such as the Pearson's Correlation Coefficient and the Standard Error as described in Section 2 were then acquired. Running descriptive statistic summaries on every set of data returned a more in depth analysis on the data in terms of linearity and correlation.
 
-\clearpage
+\newpage
 
 \begin{figure}[htp]
     \centering
@@ -103,8 +105,6 @@ The process begins by first collecting data on the average college tuition for e
 \end{figure} 
 
 For the first graph, the linear model is shown as $y= 196x - 387,400$. Therefore, for every unit increase in years, the public university tuition rose by \$196. Same logic can be applied to the private university equation of $y= 637.2x - 1,258,000$ with an annual increase of \$637.20. As for attendance, there is an annual increase of 244,600 students overall attending higher education represented as $y= 244,600x - 472,900,000$. Through further calculations, it's shown that all three of the graphs generated have a correlation coefficient of +1 meaning that the correlation between the data is strong. Then when analyzing the residual standard error as discussed in Section 2, we find that the first graph has a calculated RSE of 8.263e-13 which is highly desired. Such values indicate that the RSE very close but not at zero, indicating a good fit between the data and the trend line. This is also shown through the other graphs where private tuition has an RSE of 1.823e-12 and attendance has a 1.551e-09. 
-
-
 
 \section{Application}
 From the given graphs and data presented, we can see that all of the data has a positive slope from 1970 to 2019. From an attendance standpoint, the amount of people enrolled in four year universities increases almost every year. We can credit this to how much of a demand that college education has become in the always evolving job market. With the better and high paying jobs that having a college degree can lead one to, it can be observed that this also benefits the individual in other ways. Correlations have been found that illustrate how those with degrees further experience higher standards of living and better social/personal well being \citep{chan2016understanding}. With promises of better quality of life, it's understandable how correlation grew strong between college attendance as time passed.
@@ -133,3 +133,5 @@ All data used in the this paper can be credited to the Education Data Initiative
 \bibliography{sources.bib}
 
 \end{document}
+
+
